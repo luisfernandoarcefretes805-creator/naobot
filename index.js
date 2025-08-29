@@ -54,7 +54,8 @@ const job = new CronJob(
 );
 
 console.log(`🚀 Pinger Bot iniciado. Pingueando a ${TARGET_URL} cada 14 minutos.`);
-console.log(`▶️ El próximo ping será a las: ${job.nextDate().toLocaleTimeString()}`);
+// LÍNEA NUEVA (CORRECTA)
+console.log(`▶️ El próximo ping será a las: ${job.nextDate().toJSDate().toLocaleTimeString()}`);
 
 
 // Iniciar el servidor
